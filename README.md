@@ -6,7 +6,9 @@ MML(Music Macro Language)是一些在线游戏（如洛奇）的乐谱代码
 beep谱指以`[频率, 持续时间]`表示一个音符的乐谱，用于蜂鸣器播放音乐
 
 ## 用法
-将Python代码中的“改成MML乐谱”换成事先准备好的单音轨乐谱。到代码的这个网址粘贴并运行。将输出结果复制，保存为TMP.H，放到PLAY.CPP同一目录。用Turbo C++打开PLAY.CPP，编译之即可。
+将Python代码中的“改成MML乐谱”换成事先准备好的单音轨乐谱。到代码的这个网址或者最下边的网址粘贴并运行。（直接运行需要安装Python 3）
+
+将输出结果复制，保存为TMP.H，放到PLAY.CPP同一目录。用Turbo C++打开PLAY.CPP，编译之即可。
 
 可选参数：
 
@@ -21,3 +23,4 @@ beep谱指以`[频率, 持续时间]`表示一个音符的乐谱，用于蜂鸣�
 ## 链接
 * [MML语法参考](https://mabinogi.fws.tw/ac_com_annzyral.php)
 * [获取MML乐谱](https://mabinogi.fws.tw/ac_comproser.php)
+* [在线编译Python 3](https://c.runoob.com/compile/9)
