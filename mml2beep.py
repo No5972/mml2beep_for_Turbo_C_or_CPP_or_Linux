@@ -435,6 +435,8 @@ def main():
     print("int k[NOTESCONUT][2] = {")
     for i in range(len(res_parts)):
         print(str(res_parts[i]).replace("[", "{").replace("]", "}")[1:-1])
+        if i != len(res_parts) - 1:
+            print(",")
     print("};")
 
 if __name__ == '__main__':
