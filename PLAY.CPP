@@ -1,26 +1,25 @@
 /* *************************
- * Use Turbo C++ to compile.
+ * Use TCC to compile instead
+ * of GCC.
  * Copy the Python outputs 
  * and save as "TMP.H" at
  * the same directory of 
  * this CPP file.
  * *************************/
 
-#include <dos.h>
-#include <iostream.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
+#include <linux/kd.h>
+#include <stdio.h>
 #include "tmp.h"
 
 int main() {
-	int i = 0, j = 0;
+	int i = 0;
 	for (i=0; i<=NOTESCONUT; i++) {
-		cout<<k[i][0]<<" ";
-		for (j=0; j<=k[i][1]; j++) {
-			sound(k[i][0]);
-			delay(1);
-		}
-		nosound();
-		delay(10);
+		printf("%d ", k[i][0]);
+		ioctl(STDOUT_FILENO, KIOCSOUND, k[i][0] == 0 ? 0 : 1193180/k[i][0]);
+		usleep(k[i][1] * 1000);
 	}
-	nosound();
+	ioctl(STDOUT_FILENO, KIOCSOUND, 0);
 	return 0;
 }
